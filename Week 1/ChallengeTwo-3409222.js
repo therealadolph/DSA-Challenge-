@@ -6,7 +6,6 @@ class SearchSuggestionSystem {
     getSuggestions(searchWord) {
         const result = [];
         
-        // Process each prefix of searchWord
         for (let i = 1; i <= searchWord.length; i++) {
             const prefix = searchWord.slice(0, i);
             const suggestions = [];
