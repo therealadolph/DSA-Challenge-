@@ -1,18 +1,18 @@
 class SearchSuggestionSystem {
     constructor(products) {
-        // Store a sorted copy of products
+        
         this.products = [...products].sort();
     }
     
     getSuggestions(searchWord) {
         const result = [];
         
-        // Process each prefix of searchWord
+      
         for (let i = 1; i <= searchWord.length; i++) {
             const prefix = searchWord.slice(0, i);
             const suggestions = [];
             
-            // Find matching products for current prefix
+            
             for (const product of this.products) {
                 if (product.startsWith(prefix) && suggestions.length < 3) {
                     suggestions.push(product);
